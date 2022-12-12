@@ -4,9 +4,7 @@ import { Home } from "./pages/home";
 
 function App() {
   return (
-      <HashRouter>
-        <Route path="/" element={<Home />}></Route>
-      </HashRouter>
+      <Home />
   );
 }
 
