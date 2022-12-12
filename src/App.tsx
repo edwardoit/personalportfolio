@@ -4,11 +4,9 @@ import { Home } from "./pages/home";
 
 function App() {
   return (
-    <BrowserRouter>
       <HashRouter>
         <Route path="/" element={<Home />}></Route>
       </HashRouter>
-    </BrowserRouter>
   );
 }
 
