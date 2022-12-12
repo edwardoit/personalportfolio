@@ -48,7 +48,7 @@ button {
   transition: all 0.2s ease-in-out;
 }
 button:hover {
-  background-color: cornflowerblue;
+  background: var(--color-bg);
   transform: scale(1.2);
 }
 input {
