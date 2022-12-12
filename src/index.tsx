@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./customization/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { HashRouter } from "react-router-dom";
 
 //seleziono il div root nell'index.html
 const root = ReactDOM.createRoot(
@@ -11,7 +12,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+      <HashRouter>
+          <App />
+      </HashRouter>
   </React.StrictMode>
 );
 
