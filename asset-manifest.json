@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/personalportfolio/static/css/main.8294d7fd.css",
-    "main.js": "/personalportfolio/static/js/main.c8795d3b.js",
+    "main.js": "/personalportfolio/static/js/main.d1da09b5.js",
     "static/js/787.50217c02.chunk.js": "/personalportfolio/static/js/787.50217c02.chunk.js",
     "static/media/GraphQL Logo + Wordmark Stacked (Rhodamine).png": "/personalportfolio/static/media/GraphQL Logo + Wordmark Stacked (Rhodamine).de9c14e1a6276c40ccd8.png",
     "static/media/coder.png": "/personalportfolio/static/media/coder.52b5356fdc110fa085d5.png",
@@ -11,11 +11,11 @@
     "static/media/node.svg": "/personalportfolio/static/media/node.cf2b4de6f517ce6f0c31.svg",
     "index.html": "/personalportfolio/index.html",
     "main.8294d7fd.css.map": "/personalportfolio/static/css/main.8294d7fd.css.map",
-    "main.c8795d3b.js.map": "/personalportfolio/static/js/main.c8795d3b.js.map",
+    "main.d1da09b5.js.map": "/personalportfolio/static/js/main.d1da09b5.js.map",
     "787.50217c02.chunk.js.map": "/personalportfolio/static/js/787.50217c02.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8294d7fd.css",
-    "static/js/main.c8795d3b.js"
+    "static/js/main.d1da09b5.js"
   ]
 }
