@@ -1,0 +1,161 @@
+.description-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  min-height: 20rem;
+  margin: 10rem 0;
+}
+
+.description-container div:first-child {
+  display: flex;
+  min-height: 20rem;
+  width: 100%;
+  background-image: url("../../media/coder.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 5rem 0;
+}
+.description-container span {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.technologies-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.technologies-container div:first-child span {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+  margin: 5rem 0;
+}
+
+.tech-card-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+}
+.tech-card-container div {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+}
+
+.technologies-container .tech-card-container:nth-child(2) .first-card {
+  background-image: url("../../media/React-icon.svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.technologies-container .tech-card-container:nth-child(2) .second-card {
+  background-image: url("../../media/GraphQL Logo + Wordmark Stacked (Rhodamine).png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.technologies-container .tech-card-container:nth-child(3) .first-card {
+  background-image: url("../../media/node.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.technologies-container .tech-card-container:nth-child(3) .second-card {
+  background-image: url("../../media/512px-Amazon_Web_Services_Logo.svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.technologies-container .tech-card-container:nth-child(4) .first-card {
+  background-image: url("../../media/400px-Firebase_Logo.svg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.technologies-container .tech-card-container:nth-child(4) .second-card {
+  background-image: url("../../media/MongoDB-Logo-500x313.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@media only screen and (min-width: 451px) and (max-width: 850px) {
+  .description-container {
+    margin: 3rem 0;
+  }
+  .description-container div:first-child {
+    min-height: 15rem;
+    margin: 3rem 0;
+  }
+  .description-container span {
+    width: 90%;
+    font-size: 1.3rem;
+  }
+
+  .technologies-container div:first-child span {
+    letter-spacing: 0.3rem;
+    margin: 3rem 0;
+  }
+
+  .tech-card-container {
+    flex-direction: row;
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .tech-card-container div {
+    min-height: 10rem;
+    width: 50%;
+    margin: 3rem 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .description-container {
+    margin: 2rem 0;
+  }
+  .description-container div:first-child {
+    min-height: 10rem;
+    margin: 2rem 0;
+  }
+  .description-container span {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .technologies-container div:first-child span {
+    letter-spacing: 0.3rem;
+    margin: 2rem 0;
+  }
+
+  .tech-card-container {
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .tech-card-container div {
+    min-height: 8rem;
+    width: 50%;
+    margin: 2rem 0;
+  }
+}

@@ -1,0 +1,321 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:700");
+/* define the fonts and colors used in the project */
+:root {
+  --font: "Open Sans", sans-serif;
+  --color-bg: #884242;
+  --color-txt: #fff;
+  --color-home: #ffffff;
+  --color-about: #00f9ff;
+  --color-projects: #08ff00;
+  --color-contacts: #1f00ff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  font-family: var(--font);
+  color: var(--color-txt);
+  background: var(--color-bg);
+}
+button {
+  outline: none;
+  border: 1px solid white;
+  color: white;
+  background-color: #0075ff;
+  padding: 1rem;
+  border-radius: 20px;
+  font-weight: 900;
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  background-color: cornflowerblue;
+  transform: scale(1.2);
+}
+input {
+  border-bottom: 2px solid #0075ff;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+  background-color: tomato;
+  color: white;
+  width: 100%;
+  font-size: 1.3rem;
+}
+input:hover {
+  border-color: white;
+}
+
+#menuIcon {
+  font-size: 3rem;
+}
+
+.App .Navbar {
+  /* display the items of the navigation bar in a grid, where the anchor link elements take the space left available by the header  */
+  display: flex;
+  grid-template-columns: auto 1fr;
+  /* center the items vertically */
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  width: 100%;
+}
+.App .Navbar div {
+  display: flex;
+  width: 20%;
+}
+
+.App .Navbar div h2 {
+  display: flex;
+  width: 30%;
+  min-height: 6rem;
+  min-width: 6rem;
+  /* include padding instead of margin to have the header attached to the window's borders (and therefore to avoid the string included with a pseudo element from being displayed inappropriately to the left of the header) */
+  padding: 0.25rem 0.75rem;
+  font-size: 2.5rem;
+  color: var(--color-bg);
+  background: var(--color-home);
+  background-image: url("../media/logo.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* position relative to absolute position the pseudo element */
+  position: relative;
+  /* transition for the change in background color (occurring as the nav items are pressed) */
+  transition: all 0.5s ease;
+}
+
+.App .Navbar h2:before {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* with a pseudo element include a string, which is hidden by default below the header, to the left of the page  */
+  content: "Edoardo_Cresci";
+  position: absolute;
+  left: 100%;
+  transform: translateX(-50rem);
+  /* top to match the vertical padding */
+  color: var(--color-txt);
+  /* transition for the transform property, to translate the string into view and to the right of the header */
+  transition: all 0.3s ease-in-out;
+  letter-spacing: 0.2rem;
+  /* z-index to have the pseudo element below the header itself */
+  z-index: -5;
+}
+.App .Navbar div span {
+  display: flex;
+  width: 70%;
+  justify-content: right;
+  align-items: center;
+  margin-right: 1rem;
+}
+.App .Navbar h2:hover:before {
+  /* translate the pseudo element into view on hover */
+  transform: translateX(10px);
+}
+
+.navItems {
+  /* display the unordered list in a single row, placing the elements at the end of the grid column */
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.App .Navbar ul li {
+  /* separate the list items more prominently */
+  display: flex;
+  min-width: 15%;
+  min-height: 6rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+}
+.App .Navbar ul li:last-child {
+  margin: 0;
+}
+
+.App .Navbar ul li:hover {
+  background-color: cornflowerblue;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+#hamburgerMenu {
+  display: none;
+  justify-content: right;
+  padding-right: 1rem;
+  align-items: center;
+}
+
+.App .Navbar ul li a {
+  /* reset the anchor link styles */
+  padding: 1rem;
+  color: inherit;
+  text-decoration: none;
+  /* position relative to absolute position the connected pseudo element */
+  position: relative;
+}
+
+.App .Navbar ul li a:before {
+  /* include a faux-border with a pseudo element  */
+  content: "";
+  position: absolute;
+  /* by default have the faux-border hidden from view */
+  top: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* transition for the hover state */
+  transition: all 0.3s ease-out;
+}
+
+.App .Navbar ul li a:hover:before {
+  /* on hover, change the bottom property to have the faux-border stretch from the top down */
+  bottom: -5px;
+}
+
+.App h1 {
+  /* style the header to have the color matching the background of the header in the navbar */
+  color: var(--color-home);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 20vh;
+  font-size: calc(2rem + 1.5vw);
+}
+
+#logoImgDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: inherit;
+}
+#content-generic {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+for relatively smaller and smaller viewports:
+- start by hiding the pseudo element responsible for the string
+- continue by removing the header bearing the "logo" as well
+*/
+
+@media only screen and (min-width: 451px) and (max-width: 850px) {
+  .App .Navbar h2:before {
+    display: none;
+  }
+  .App .Navbar ul li {
+    min-height: 5rem;
+  }
+
+  .App .Navbar ul li a {
+    font-size: 1.2rem;
+  }
+  #logoImg {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+@media (max-width: 450px) {
+  /* adjust the visible anchor link elements to show them in a single column, centered in the page */
+  .App .Navbar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .App .Navbar div {
+    display: flex;
+    width: 100%;
+  }
+  .App .Navbar div h2 {
+    display: none;
+    min-height: 5rem;
+    min-width: 5rem;
+  }
+  .App .Navbar div span {
+    margin-right: 0;
+  }
+
+  .App .Navbar .navItems li:last-child {
+    margin: 0;
+  }
+  .App .Navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
+  .App .Navbar .navItems {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 100%;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .App .Navbar .navItems.active {
+    display: flex;
+    flex: 0 0 auto;
+    min-width: 100%;
+    justify-content: center;
+    position: absolute;
+    flex-direction: row;
+    cursor: pointer;
+    transition: all 1s ease;
+  }
+  .App .Navbar ul li {
+    display: flex;
+    justify-content: center;
+    min-height: 2rem;
+    border-radius: 50px;
+    width: 50%;
+    margin: 1rem;
+  }
+  .App .Navbar ul li a {
+    font-size: 1.2rem;
+  }
+  #hamburgerMenu {
+    display: flex;
+    justify-content: right;
+  }
+
+  #logoImg {
+    height: 4rem;
+    width: 4rem;
+  }
+}
