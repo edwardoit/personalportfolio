@@ -318,4 +318,7 @@ for relatively smaller and smaller viewports:
     height: 4rem;
     width: 4rem;
   }
+  .App .Navbar h2:before {
+    font-size: 0.9rem;
+  }
 }

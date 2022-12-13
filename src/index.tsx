@@ -3,8 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./customization/index.css";
 
 import reportWebVitals from "./reportWebVitals";
-import {Home} from "./pages/home";
-
+import { Home } from "./pages/home";
 
 //seleziono il div root nell'index.html
 const root = ReactDOM.createRoot(
@@ -13,7 +12,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-          <Home />
+    <Home />
   </React.StrictMode>
 );
 
